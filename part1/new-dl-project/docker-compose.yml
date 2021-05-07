@@ -1,0 +1,8 @@
+version: '2.3'
+services:
+    example:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: python -c 'import torch; print(f"{torch.cuda.is_available()=}")'
+
